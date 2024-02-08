@@ -1,0 +1,50 @@
+# basic Settings
+set hidden true
+set ignorecase true
+set icons true
+set previewer ~/.config/lf/lf_kitty_preview
+set cleaner ~/.config/lf/lf_kitty_clean
+
+# reset default keybinds
+map m
+map z
+
+# define custom commands
+cmd mkdir ${{
+    printf "directory name: "
+    read ans
+    mkdir $ans
+}}
+
+cmd mkfile ${{
+    printf "file name: "
+    read ans
+    nano $ans
+}}
+
+cmd unzip ${{
+    unzip $f
+}}
+
+cmd delete ${{
+    set -f
+    printf "$fx\n"
+    printf "delete?[y/n]"
+    read ans
+    [ "$ans" = "y" ] && sudo rm -rf $fx
+}}
+
+# basic Mappings
+map y copy
+map x cut
+map c clear
+map p paste
+map r rename
+map md mkdir
+map mf mkfile
+map u unzip
+map <c-delete> delete
+
+# movement
+map ge cd ~/erikyo
+map gr cd /.
