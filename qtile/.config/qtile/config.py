@@ -47,6 +47,7 @@ keys = [
     # Rofi
     Key([mod], "Space", lazy.spawn("rofi -show drun")),
     Key([mod, "control"], "Space", lazy.spawn("bash ~/.config/rofi/power_menu.sh", shell=True)),
+    Key([mod, "shift"], "Space", lazy.spawn("passmenu")),
     # Key([mod, "shift"], "Space", lazy.spawn("dmenu_run -i -p ' >' -fn 'SauceCodePro Nerd Font-10' -nb '#272e33' -nf '#d3c6aa' -sb '#272e33' -sf '#dbbc7f' -x 140 -z 370")),
 ]
 
