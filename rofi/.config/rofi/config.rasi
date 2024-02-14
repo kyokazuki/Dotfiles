@@ -11,7 +11,7 @@ configuration {
     icon-theme:             "Papirus";
     show-icons:             true;
 
-    xoffset:                145;
+    xoffset:                140;
     yoffset:                1;
 }
 

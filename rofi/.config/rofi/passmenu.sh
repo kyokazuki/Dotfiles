@@ -19,12 +19,14 @@ else
 	exit 1
 fi
 
+dmenu=rofi
+
 prefix=${PASSWORD_STORE_DIR-~/.password-store}
 password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-password=$(printf '%s\n' "${password_files[@]}" | rofi -dmenu -i -p '󰟵 >' -format i)
+password=$(printf '%s\n' "${password_files[@]}" | rofi -dmenu -i -p '󰟵 >' "$@")
 
 [[ -n $password ]] || exit
 

@@ -48,13 +48,11 @@ keys = [
     Key([mod], "Space", lazy.spawn("rofi -show drun")),
     Key([mod, "control"], "Space", lazy.spawn("bash ~/.config/rofi/power_menu.sh", shell=True)),
     Key([mod, "shift"], "Space", lazy.spawn("bash ~/.config/rofi/passmenu.sh", shell=True)),
-    # Key([mod, "shift"], "Space", lazy.spawn("dmenu_run -i -p ' >' -fn 'SauceCodePro Nerd Font-10' -nb '#272e33' -nf '#d3c6aa' -sb '#272e33' -sf '#dbbc7f' -x 140 -z 370")),
 ]
 
-# Layout
+# Layouts
 layouts = [
     layout.Columns(
-        # border_focus='#d3c6aa',
         border_focus='#dbbc7f',
         border_normal='#272e33',
         border_on_single=False,
@@ -66,12 +64,13 @@ layouts = [
 ]
 
 # Groups
-groups = [Group(i) for i in "12345"]
+groups = [Group(name=i, label="") for i in "yuiop"]
 for i in groups:
     keys.extend(
         [
             # Switch to group
             Key([mod], i.name, lazy.group[i.name].toscreen()),
+            
             # Switch to & move focused window to group
             Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True)),
         ]
@@ -92,8 +91,9 @@ screens = [
             [   
                 widget.GroupBox(
                     active="#d3c6aa",
-                    block_highlight_text_color="#1e2326",
-                    highlight_method="block",
+                    block_highlight_text_color="#272e33",
+                    fontsize=11,
+                    highlight_method="text",
                     inactive="#414b50",
                     margin_x=2,
                     padding_x=5,
@@ -101,7 +101,7 @@ screens = [
                     this_current_screen_border='#dbbc7f',
                 ),
                 widget.TextBox(fmt=''),
-                widget.Spacer(length=735),
+                widget.Spacer(length=740),
                 widget.Clock(
                     format="%Y/%m/%d %a %H:%M",
                 ),
@@ -156,10 +156,13 @@ mouse = [
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 follow_mouse_focus = False
-bring_front_click = False
+bring_front_click = True
 floats_kept_above = True
 cursor_warp = False
 floating_layout = layout.Floating(
+    border_width=2,
+    border_focus='#dbbc7f',
+    border_normal='#7fbbb3',
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
