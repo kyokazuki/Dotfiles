@@ -54,7 +54,7 @@ keys = [
 layouts = [
     layout.Columns(
         border_focus='#dbbc7f',
-        border_normal='#272e33',
+        border_normal='#1e2326',
         border_on_single=False,
         border_width=2,
         insert_position=1,
@@ -98,11 +98,12 @@ screens = [
                     margin_x=2,
                     padding_x=5,
                     rounded=True,
-                    this_current_screen_border='#dbbc7f',
+                    this_current_screen_border='#a7c080',
                 ),
                 widget.TextBox(fmt=''),
                 widget.Spacer(length=740),
                 widget.Clock(
+                    font="SauceCodePro Nerd Font Bold",
                     format="%Y/%m/%d %a %H:%M",
                 ),
                 widget.Spacer(),
@@ -136,12 +137,12 @@ screens = [
                 widget.Spacer(length=5),
             ],
             20,
-            # background="#1e2326",
-            background="#272e33",
+            background="#1e2326",
+            # background="#272e33",
             # border_width=[0, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["#000000", "#000000", "#d3c6aa", "#000000"]
         ),
-        wallpaper="~/.config/qtile/rose.jpg",
+        wallpaper="~/.config/qtile/rose_dark.jpg",
         wallpaper_mode="fill",
     ),
 ]
