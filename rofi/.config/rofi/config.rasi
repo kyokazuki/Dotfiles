@@ -18,9 +18,9 @@ configuration {
 @theme "/dev/null"
 
 * {
-    bg:                     #272e33;
+    bg:                     #1e2326;
     fg:                     #d3c6aa;
-    bg-selected:            #272e33;
+    bg-selected:            #1e2326;
     fg-selected:            #dbbc7f;
     
     border:                 0;
