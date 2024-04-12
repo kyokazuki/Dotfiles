@@ -94,13 +94,13 @@ screens = [
                     block_highlight_text_color="#272e33",
                     fontsize=11,
                     highlight_method="text",
-                    inactive="#414b50",
+                    inactive="#495156",
                     margin_x=2,
                     padding_x=5,
                     rounded=True,
                     this_current_screen_border='#a7c080',
                 ),
-                widget.TextBox(fmt=''),
+                widget.TextBox(fmt='', padding=6),
                 widget.Spacer(length=740),
                 widget.Clock(
                     font="SauceCodePro Nerd Font Bold",
@@ -110,14 +110,34 @@ screens = [
                 widget.Systray(
                     icon_size=13,
                 ),
-                widget.Spacer(length=3),
+                widget.Spacer(length=4),
                 # widget.TextBox(fmt=''),
                 # widget.Net(
                 #     format='󱦳{down:.1f}󱦲{up:.1f}{up_suffix}',
                 #     prefix='M',
                 #     update_interval=1.5,
                 # ),
-                widget.TextBox(fmt=''),
+                widget.TextBox(fmt='', padding=6),
+                widget.Bluetooth(
+                    default_show_battery=True,
+                    default_text='󰂯',
+                    device_battery_format='({battery}%)',
+                    device_format='{symbol}{name}{battery_level}',
+                    symbol_connected='󰂯',
+                    symbol_paired='',
+                    symbol_powered=('',''),
+                ),
+                widget.TextBox(fmt='', padding=6),
+                widget.PulseVolume(
+                    emoji=True,
+                    emoji_list=['󰸈','󰕿','󰖀','󰕾'],
+                    fontsize=16,
+                ),
+                widget.PulseVolume(
+                    scroll_fixed_width=True,
+                    width=30,
+                ),
+                widget.TextBox(fmt='', padding=6),
                 widget.TextBox(
                     fmt=' ',
                     fontsize=13,
@@ -125,24 +145,34 @@ screens = [
                 widget.Spacer(length=-4),
                 widget.CPU(
                     format='{load_percent}%',
+                    markup=True,
+                    max_chars=5,
+                    scroll_fixed_width=True,
                     update_interval=1.5,
+                    width=45,
                 ),
-                widget.TextBox(fmt=''),
-                widget.PulseVolume(
-                    emoji=True,
-                    emoji_list=['󰸈','󰕿','󰖀','󰕾'],
-                    fontsize=15,
+                widget.ThermalSensor(
+                    format='{temp:.0f}{unit}',
+                    scroll_fixed_width=True,
+                    tag_sensor='CPUTIN',
+                    width=40,
                 ),
-                widget.PulseVolume(),
-                widget.Spacer(length=5),
+                # widget.TextBox(fmt='', padding=6),
+                # widget.Wlan(
+                #     disconnected_message='󰖪 ',
+                #     # scroll_fixed_width=True,
+                #     # width=20,
+                # ),
+                widget.Spacer(length=7),
             ],
             20,
-            background="#1e2326",
+            # background="#00000000",
+            background=["#1e2326"],
             # background="#272e33",
-            # border_width=[0, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["#000000", "#000000", "#d3c6aa", "#000000"]
+            # border_width=[0, 0, 1, 0],  # Draw top and bottom borders
+            # border_color=["#2e383c", "#2e383c", "#2e383c", "#2e383c"]
         ),
-        wallpaper="~/.config/qtile/rose_dark.jpg",
+        wallpaper="~/.config/qtile/wallpaper.jpg",
         wallpaper_mode="fill",
     ),
 ]
