@@ -17,7 +17,7 @@ background_blur 0
 background_image none
 
 # BEGIN_KITTY_THEME
-# Gruvbox Material Dark Hard
+# Gruvbox Dark
 include current-theme.conf
 # END_KITTY_THEME
 

@@ -31,7 +31,8 @@ source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-autosuggestions
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# load bash profile
-if [ -f ~/.bash_profile ]; then 
-    . ~/.bash_profile;
-fi
+# fzf key bindings and completion
+eval "$(fzf --zsh)"
+
+# use eza instead of ls
+alias ls='eza --color=always -a --group-directories-first'
