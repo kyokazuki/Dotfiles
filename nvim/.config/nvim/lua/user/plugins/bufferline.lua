@@ -3,12 +3,20 @@ return {
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-        vim.keymap.set("n", "<C-p>", ":BufferLineCycleNext<CR>")
-        vim.keymap.set("n", "<C-u>", ":BufferLineCyclePrev<CR>")
+        vim.api.nvim_create_autocmd(
+            "VimEnter", 
+            {
+                -- set <C-u> to overwrite neoscroll
+                callback = function()
+                    vim.keymap.set("n", "<C-p>", ":BufferLineCycleNext<CR>")
+                    vim.keymap.set("n", "<C-u>", ":BufferLineCyclePrev<CR>")
+                end
+            }
+        )
         local bufferline = require("bufferline")
         bufferline.setup({
             options = {
-                always_show_bufferline = false,
+                always_show_bufferline = true,
                 mode = "buffers",
                 offsets = {
                     {

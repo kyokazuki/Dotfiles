@@ -12,7 +12,7 @@ font_family      SauceCodePro Nerd Font
 # font_family      CommitMono Nerd Font 
 
 # Color
-background_opacity 1.0
+background_opacity 1
 background_blur 0
 background_image none
 

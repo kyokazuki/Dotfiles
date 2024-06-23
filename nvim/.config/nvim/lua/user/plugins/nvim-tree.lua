@@ -12,9 +12,11 @@ return {
 
         -- keymaps
         vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+	vim.keymap.set("n", "<leader>q", ":bd<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR><C-w>l")
 
         -- fix inconsistency when entering
-        vim.api.nvim_create_autocmd("VimEnter", {command = "NvimTreeOpen"})
+        -- vim.api.nvim_create_autocmd("VimEnter", {command = "NvimTreeFindFile"})
+        vim.api.nvim_create_autocmd("VimEnter", {command = "NvimTreeClose"})
         vim.api.nvim_create_autocmd("ExitPre", {command = "NvimTreeClose"})
 
         require("nvim-tree").setup({
@@ -52,7 +54,11 @@ return {
                         symlink = "",
                     },
                 },
-            }
+            },
+	    view = {
+		side = "left",
+		signcolumn = "no",
+	    },
         })
     end
 }

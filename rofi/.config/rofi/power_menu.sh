@@ -1,9 +1,9 @@
 #!/bin/sh
 list=(
-  "󰒲 Suspend"      "systemctl suspend"
-  "󰍃 Logout"       "pkill -KILL -u $(whoami)"
-  " Reboot"       "systemctl reboot"
-  " Shutdown"     "systemctl poweroff"
+  "󰒲  Suspend"      "systemctl suspend"
+  "󰍃  Logout"       "pkill -KILL -u $(whoami)"
+  "  Reboot"       "systemctl reboot"
+  "  Shutdown"     "systemctl poweroff"
 )
 
 if selected="$(for (( i=0; i<=$((${#list[@]}/2-1)); i++ )) { echo "${list[($i+1)*2-2]}"; } | rofi -dmenu -i -p ' >' -format i)"; then

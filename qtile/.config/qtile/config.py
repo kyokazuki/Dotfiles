@@ -46,6 +46,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown()),
     # Rofi
     Key([mod], "Space", lazy.spawn("rofi -show drun")),
+    # Key([mod], "Space", lazy.spawn("rofi -show ssh")),
     Key([mod, "control"], "Space", lazy.spawn("bash ~/.config/rofi/power_menu.sh", shell=True)),
     Key([mod, "shift"], "Space", lazy.spawn("bash ~/.config/rofi/passmenu.sh", shell=True)),
 ]
@@ -60,29 +61,20 @@ layouts = [
         insert_position=1,
         margin=0,
         margin_on_single=0,
-        ),
+    ),
 ]
 
 # Groups
-groups = [Group(name=i, label="") for i in "0123"]
-# group_keys = ['u','i','o','p','bracketleft']
-group_keys = ['u','i','o','p']
-for i in range(4):
+groups = [Group(name=i, label="") for i in "01234"]
+group_keys = ['u','i','o','p','bracketleft']
+for i in range(5):
     keys.extend(
         [
             # Switch to group
             Key([mod], group_keys[i], lazy.group[groups[i].name].toscreen()),
-            # Key([mod], "i", lazy.group[2].toscreen()),
-            # Key([mod], "o", lazy.group[3].toscreen()),
-            # Key([mod], "p", lazy.group[4].toscreen()),
-            # Key([mod], "bracketleft", lazy.group['5'].toscreen()),
             
             # Switch to & move focused window to group
             Key([mod, "shift"], group_keys[i], lazy.window.togroup(groups[i].name, switch_group=True)),
-            # Key([mod, "shift"], "i", lazy.window.togroup('2', switch_group=True)),
-            # Key([mod, "shift"], "o", lazy.window.togroup('3', switch_group=True)),
-            # Key([mod, "shift"], "p", lazy.window.togroup('4', switch_group=True)),
-            # Key([mod, "shift"], "bracketleft", lazy.window.togroup('5', switch_group=True)),
         ]
     )
 
@@ -101,33 +93,27 @@ screens = [
             [   
                 widget.GroupBox(
                     active="#a89984",
-                    # block_highlight_text_color="#98971a",
                     fontsize=11,
                     highlight_method="text",
                     inactive="#3c3836",
                     margin_x=2,
                     padding_x=5,
                     rounded=True,
-                    this_current_screen_border='#98971a',
+                    this_current_screen_border='#b8bb26',
                 ),
-                widget.TextBox(fmt='', padding=6),
-                widget.Spacer(length=760),
+                # widget.TextBox(fmt='', padding=6),
+                # widget.TextBox(fmt='', foreground='#3c3836', padding=6),
+                widget.Spacer(length=750),
                 widget.Clock(
                     font="SauceCodePro Nerd Font Bold",
                     format="%Y/%m/%d %a %H:%M",
                 ),
                 widget.Spacer(),
                 widget.Systray(
-                    icon_size=16,
+                    icon_size=12,
                     padding=8,
                 ),
                 widget.Spacer(length=4),
-                # widget.TextBox(fmt=''),
-                # widget.Net(
-                #     format='󱦳{down:.1f}󱦲{up:.1f}{up_suffix}',
-                #     prefix='M',
-                #     update_interval=1.5,
-                # ),
                 # widget.TextBox(fmt='', padding=6),
                 # widget.Bluetooth(
                 #     default_show_battery=True,
@@ -148,34 +134,35 @@ screens = [
                 #     scroll_fixed_width=True,
                 #     width=30,
                 # ),
-                widget.TextBox(fmt='', padding=6),
-                widget.TextBox(
-                    fmt=' ',
-                    fontsize=13,
-                ),
-                widget.Spacer(length=-4),
-                widget.CPU(
-                    format='{load_percent}%',
-                    markup=True,
-                    max_chars=5,
-                    scroll_fixed_width=True,
-                    update_interval=1.5,
-                    width=45,
-                ),
-                widget.ThermalSensor(
-                    format='{temp:.0f}{unit}',
-                    scroll_fixed_width=True,
-                    tag_sensor='CPUTIN',
-                    width=40,
-                ),
-                widget.Spacer(length=7),
+                # widget.TextBox(fmt='', padding=6),
+                # widget.TextBox(
+                #     fmt=' ',
+                #     fontsize=13,
+                # ),
+                # widget.Spacer(length=-4),
+                # widget.CPU(
+                #     format='{load_percent}%',
+                #     markup=True,
+                #     max_chars=5,
+                #     scroll_fixed_width=True,
+                #     update_interval=1.5,
+                #     width=45,
+                # ),
+                # widget.ThermalSensor(
+                #     format='{temp:.0f}{unit}',
+                #     scroll_fixed_width=True,
+                #     tag_sensor='CPUTIN',
+                #     width=40,
+                # ),
+                # widget.Spacer(length=7),
             ],
             20,
             background=["#1d2021"],
             # border_width=[0, 0, 1, 0],  # Draw top and bottom borders
             # border_color=["#2e383c", "#2e383c", "#2e383c", "#2e383c"]
         ),
-        wallpaper="~/.config/qtile/wallpaper.jpg",
+        wallpaper="~/.config/qtile/gruvbox_forest.png",
+        # wallpaper="~/.config/qtile/gruvbox_tokyotower.jpg",
         wallpaper_mode="fill",
     ),
 ]
@@ -196,7 +183,7 @@ cursor_warp = False
 floating_layout = layout.Floating(
     border_width=1,
     border_focus='#d5c4a1',
-    border_normal='#3c3836',
+    border_normal='#a89984',
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
