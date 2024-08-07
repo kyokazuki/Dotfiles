@@ -1,13 +1,19 @@
 return { 
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000,
+    -- "ellisonleao/gruvbox.nvim",
+    -- config = function()
+    --     require("gruvbox").setup({
+    --         palette_overrides = {
+    --             dark0 = "#1d2021",
+    --         }
+    --     })
+    --     vim.cmd("colorscheme gruvbox")
+    -- end
+    --
+    "rebelot/kanagawa.nvim",
     config = function()
-        require("gruvbox").setup({
-            palette_overrides = {
-                dark0 = "#1d2021",
-            }
-        })
-        vim.cmd("colorscheme gruvbox")
+        require("kanagawa").setup({
+	})
+        vim.cmd("colorscheme kanagawa-dragon")
     end
 }
 

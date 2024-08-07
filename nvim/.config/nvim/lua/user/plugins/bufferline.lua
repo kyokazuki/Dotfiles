@@ -8,8 +8,8 @@ return {
             {
                 -- set <C-u> to overwrite neoscroll
                 callback = function()
-                    vim.keymap.set("n", "<C-p>", ":BufferLineCycleNext<CR>")
-                    vim.keymap.set("n", "<C-u>", ":BufferLineCyclePrev<CR>")
+                    vim.keymap.set("n", "<A-;>", ":BufferLineCycleNext<CR>")
+                    vim.keymap.set("n", "<A-j>", ":BufferLineCyclePrev<CR>")
                 end
             }
         )

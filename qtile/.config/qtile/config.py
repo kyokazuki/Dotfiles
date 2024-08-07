@@ -54,8 +54,8 @@ keys = [
 # Layouts
 layouts = [
     layout.Columns(
-        border_focus='#d5c4a1',
-        border_normal='#3c3836',
+        border_focus='#c5c9c5',
+        border_normal='#393836',
         border_on_single=False,
         border_width=1,
         insert_position=1,
@@ -82,7 +82,7 @@ for i in range(5):
 widget_defaults = dict(
     font="SauceCodePro Nerd Font",
     fontsize=13,
-    foreground='#d5c4a1',
+    foreground='#c5c9c5',
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
@@ -92,14 +92,14 @@ screens = [
         top=bar.Bar(
             [   
                 widget.GroupBox(
-                    active="#a89984",
+                    active="#9e9b93",
                     fontsize=11,
                     highlight_method="text",
-                    inactive="#3c3836",
+                    inactive="#282727",
                     margin_x=2,
                     padding_x=5,
                     rounded=True,
-                    this_current_screen_border='#b8bb26',
+                    this_current_screen_border='#98BB6C',
                 ),
                 # widget.TextBox(fmt='', padding=6),
                 # widget.TextBox(fmt='', foreground='#3c3836', padding=6),
@@ -157,12 +157,13 @@ screens = [
                 # widget.Spacer(length=7),
             ],
             20,
-            background=["#1d2021"],
+            background=["#12120f"],
             # border_width=[0, 0, 1, 0],  # Draw top and bottom borders
             # border_color=["#2e383c", "#2e383c", "#2e383c", "#2e383c"]
         ),
-        wallpaper="~/.config/qtile/gruvbox_forest.png",
-        # wallpaper="~/.config/qtile/gruvbox_tokyotower.jpg",
+        wallpaper="~/.config/qtile/sunset_kanagawa-d.jpg",
+        # wallpaper="~/.config/qtile/mountain_kanagawa-d.jpg",
+        # https://www.pexels.com/photo/full-moon-behind-mountains-1183021/
         wallpaper_mode="fill",
     ),
 ]
@@ -182,8 +183,8 @@ floats_kept_above = True
 cursor_warp = False
 floating_layout = layout.Floating(
     border_width=1,
-    border_focus='#d5c4a1',
-    border_normal='#a89984',
+    border_focus='#c5c9c5',
+    border_normal='#15161E',
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
@@ -215,3 +216,4 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "qtile"
+

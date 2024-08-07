@@ -39,8 +39,8 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 --keymap("n", "<C-u>", ":bprevious<CR>", opts)
 
 -- Page down and up
-keymap("n", "<C-i>", "<C-d>", opts)
-keymap("n", "<C-o>", "<C-u>", opts)
+-- keymap("n", "<C-i>", "<C-d>", opts)
+-- keymap("n", "<C-o>", "<C-u>", opts)
 
 -- Move text up and down
 keymap("n", "<A-l>", "ddkP", opts)
