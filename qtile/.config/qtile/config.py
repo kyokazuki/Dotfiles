@@ -72,7 +72,7 @@ for i in range(5):
         [
             # Switch to group
             Key([mod], group_keys[i], lazy.group[groups[i].name].toscreen()),
-            
+
             # Switch to & move focused window to group
             Key([mod, "shift"], group_keys[i], lazy.window.togroup(groups[i].name, switch_group=True)),
         ]
