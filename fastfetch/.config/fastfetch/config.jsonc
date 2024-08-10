@@ -3,8 +3,8 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
 	"source": "~/Repos/ImageToPalette/icon_kanagawa-dragon.jpg",
-	"width": 25,
-	"height": 12,
+	"width": 23,
+	"height": 11,
         // "type": "small",
         "padding": {
             "top": 1,
@@ -66,17 +66,17 @@
             "key": "│ {#34}󰛖 font    {#keys}│",
             "type": "terminalfont",
         },
+        // {
+        //     "key": "│ {#31}󰍛 cpu     {#keys}│",
+        //     "type": "cpu",
+        //     "showPeCoreCount": true
+        // },
+        // {
+        //     "key": "│ {#31}󰍛 gpu     {#keys}│",
+        //     "type": "gpu",
+        // },
         {
-            "key": "│ {#31}󰍛 cpu     {#keys}│",
-            "type": "cpu",
-            "showPeCoreCount": true
-        },
-        {
-            "key": "│ {#31}󰍛 gpu     {#keys}│",
-            "type": "gpu",
-        },
-        {
-            "key": "│ {#32}󰍹 display {#keys}│",
+            "key": "│ {#35}󰍹 display {#keys}│",
             "type": "display",
         },
         // {
