@@ -1,8 +1,10 @@
 # Dotfiles :card_index_dividers:
-Configuration files for my environment.
+My desktop configuration files. [Wallpapers](/qtile/.config/qtile/) are created with my [ImageToPalette :art:](https://github.com/kyokazuki/ImageToPalette) python script.
+
+![desktop.png](/desktop1.png)
 
 ## Programs
-Some major applications:
+Some applications:
 - window manager: qtile
 - terminal emulator: kitty
 - shell: zsh
