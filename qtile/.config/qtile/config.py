@@ -63,6 +63,23 @@ layouts = [
         margin=7,
         margin_on_single=7,
     ),
+    layout.Floating(
+        border_focus='#C8C093',
+        border_normal='#393836',
+        border_width=2,
+        float_rules=[
+            # Run the utility of `xprop` to see the wm class and name of an X client.
+            *layout.Floating.default_float_rules,
+            Match(wm_class="confirmreset"),  # gitk
+            Match(wm_class="makebranch"),  # gitk
+            Match(wm_class="maketag"),  # gitk
+            Match(wm_class="ssh-askpass"),  # ssh-askpass
+            Match(wm_class="pinentry-gtk"), # GPG key password entry 
+            Match(wm_class="Pinentry-gtk"), # GPG key password entry 
+            Match(title="branchdialog"),  # gitk
+            Match(title="pinentry"),  # GPG key password entry
+        ]
+    )
 ]
 
 # Groups
@@ -163,8 +180,8 @@ screens = [
             # border_width=[0, 0, 1, 0],  # Draw top and bottom borders
             # border_color=["#2e383c", "#2e383c", "#2e383c", "#2e383c"]
         ),
-        wallpaper="~/.config/qtile/sunset_kanagawa-d.jpg",
-        # wallpaper="~/.config/qtile/mountain_kanagawa-d.jpg",
+        wallpaper="~/.config/qtile/sunset_kanagawa-dragon.jpg",
+        # wallpaper="~/.config/qtile/mountain_kanagawa-dragon.jpg",
         # https://www.pexels.com/photo/full-moon-behind-mountains-1183021/
         wallpaper_mode="fill",
     ),
@@ -183,21 +200,6 @@ follow_mouse_focus = False
 bring_front_click = True
 floats_kept_above = True
 cursor_warp = False
-floating_layout = layout.Floating(
-    border_width=1,
-    border_focus='#c5c9c5',
-    border_normal='#15161E',
-    float_rules=[
-        # Run the utility of `xprop` to see the wm class and name of an X client.
-        *layout.Floating.default_float_rules,
-        Match(wm_class="confirmreset"),  # gitk
-        Match(wm_class="makebranch"),  # gitk
-        Match(wm_class="maketag"),  # gitk
-        Match(wm_class="ssh-askpass"),  # ssh-askpass
-        Match(title="branchdialog"),  # gitk
-        Match(title="pinentry"),  # GPG key password entry
-    ]
-)
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
