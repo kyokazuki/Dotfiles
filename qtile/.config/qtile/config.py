@@ -54,13 +54,14 @@ keys = [
 # Layouts
 layouts = [
     layout.Columns(
-        border_focus='#c5c9c5',
+        # border_focus='#c5c9c5',
+        border_focus='#C8C093',
         border_normal='#393836',
-        border_on_single=False,
-        border_width=1,
+        border_on_single=True,
+        border_width=2,
         insert_position=1,
-        margin=0,
-        margin_on_single=0,
+        margin=7,
+        margin_on_single=7,
     ),
 ]
 
@@ -81,7 +82,7 @@ for i in range(5):
 # Widgets
 widget_defaults = dict(
     font="SauceCodePro Nerd Font",
-    fontsize=13,
+    fontsize=12,
     foreground='#c5c9c5',
     padding=3,
 )
@@ -103,8 +104,9 @@ screens = [
                 ),
                 # widget.TextBox(fmt='', padding=6),
                 # widget.TextBox(fmt='', foreground='#3c3836', padding=6),
-                widget.Spacer(length=750),
+                widget.Spacer(length=760),
                 widget.Clock(
+                    fontsize=12,
                     font="SauceCodePro Nerd Font Bold",
                     format="%Y/%m/%d %a %H:%M",
                 ),
