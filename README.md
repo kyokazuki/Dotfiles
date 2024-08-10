@@ -4,13 +4,14 @@ My desktop configuration files. [Wallpapers](/qtile/.config/qtile/) are created 
 ![desktop.png](/desktop1.png)
 
 ## Programs
-Some applications:
-- window manager: qtile
-- terminal emulator: kitty
-- shell: zsh
-- text editor: neovim
-- file manager: yazi
-- launcher: rofi
+Some programs:
+- Window manager: qtile
+- Terminal emulator: kitty
+- Shell: zsh
+- Text editor: neovim
+- File manager: yazi
+- Launcher: rofi
+- Fetch: fastfetch
 
 ## Import config
 Simply copy files from this repo and place them in the proper directiories. Alternatively, to import multiple at once, one can utilize [Stow](https://www.gnu.org/software/stow/).
