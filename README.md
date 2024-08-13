@@ -5,13 +5,14 @@ My desktop configuration files. [Wallpapers](/qtile/.config/qtile/) are created 
 
 ## Programs
 Some programs:
-- Window manager: qtile
-- Terminal emulator: kitty
+- Window manager: [qtile](https://github.com/qtile/qtile)
+- Compositor: [picom](https://github.com/yshui/picom)
+- Terminal emulator: [kitty](https://github.com/kovidgoyal/kitty)
 - Shell: zsh
-- Text editor: neovim
-- File manager: yazi
-- Launcher: rofi
-- Fetch: fastfetch
+- Text editor: [neovim](https://github.com/neovim/neovim)
+- File manager: [yazi](https://github.com/sxyazi/yazi)
+- Launcher: [rofi](https://github.com/davatorium/rofi)
+- Fetch: [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 
 ## Import config
 Simply copy files from this repo and place them in the proper directiories. Alternatively, to import multiple at once, one can utilize [Stow](https://www.gnu.org/software/stow/).
@@ -27,4 +28,4 @@ Simply copy files from this repo and place them in the proper directiories. Alte
    cd Dotfiles/
    stow qtile
    ```
-   This will create a folder *~/.config/qtile -> ~/Dotfiles/qtile* linked to the one in the repo.
+   This will create a folder ``~/.config/qtile`` linked to ``~/Dotfiles/qtile``.
