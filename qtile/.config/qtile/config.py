@@ -54,7 +54,6 @@ keys = [
 # Layouts
 layouts = [
     layout.Columns(
-        # border_focus='#c5c9c5',
         border_focus='#C8C093',
         border_normal='#393836',
         border_on_single=True,
@@ -62,25 +61,24 @@ layouts = [
         insert_position=1,
         margin=7,
         margin_on_single=7,
-    ),
-    layout.Floating(
-        border_focus='#C8C093',
-        border_normal='#393836',
-        border_width=2,
-        float_rules=[
-            # Run the utility of `xprop` to see the wm class and name of an X client.
-            *layout.Floating.default_float_rules,
-            Match(wm_class="confirmreset"),  # gitk
-            Match(wm_class="makebranch"),  # gitk
-            Match(wm_class="maketag"),  # gitk
-            Match(wm_class="ssh-askpass"),  # ssh-askpass
-            Match(wm_class="pinentry-gtk"), # GPG key password entry 
-            Match(wm_class="Pinentry-gtk"), # GPG key password entry 
-            Match(title="branchdialog"),  # gitk
-            Match(title="pinentry"),  # GPG key password entry
-        ]
     )
 ]
+floating_layout = layout.Floating(
+    border_focus='#C8C093',
+    border_normal='#393836',
+    border_width=2,
+    float_rules=[
+        # Run the utility of `xprop` to see the wm class and name of an X client.
+        *layout.Floating.default_float_rules,
+        Match(wm_class="confirmreset"),  # gitk
+        Match(wm_class="makebranch"),  # gitk
+        Match(wm_class="maketag"),  # gitk
+        Match(wm_class="ssh-askpass"),  # ssh-askpass
+        Match(wm_class="pinentry-gtk"), # GPG key password entry 
+        Match(wm_class="Pinentry-gtk"), # GPG key password entry 
+        Match(title="branchdialog"),  # gitk
+    ]
+)
 
 # Groups
 groups = [Group(name=i, label="") for i in "01234"]
