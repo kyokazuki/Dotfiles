@@ -59,8 +59,8 @@ layouts = [
         border_on_single=True,
         border_width=2,
         insert_position=1,
-        margin=7,
-        margin_on_single=7,
+        margin=0,
+        margin_on_single=0,
     )
 ]
 floating_layout = layout.Floating(
@@ -127,8 +127,8 @@ screens = [
                 ),
                 widget.Spacer(),
                 widget.Systray(
-                    icon_size=12,
-                    padding=8,
+                    icon_size=16,
+                    padding=6,
                 ),
                 widget.Spacer(length=4),
                 # widget.TextBox(fmt='', padding=6),
@@ -151,35 +151,36 @@ screens = [
                 #     scroll_fixed_width=True,
                 #     width=30,
                 # ),
-                # widget.TextBox(fmt='', padding=6),
-                # widget.TextBox(
-                #     fmt=' ',
-                #     fontsize=13,
-                # ),
-                # widget.Spacer(length=-4),
-                # widget.CPU(
-                #     format='{load_percent}%',
-                #     markup=True,
-                #     max_chars=5,
-                #     scroll_fixed_width=True,
-                #     update_interval=1.5,
-                #     width=45,
-                # ),
-                # widget.ThermalSensor(
-                #     format='{temp:.0f}{unit}',
-                #     scroll_fixed_width=True,
-                #     tag_sensor='CPUTIN',
-                #     width=40,
-                # ),
-                # widget.Spacer(length=7),
+                widget.TextBox(fmt='', padding=6),
+                widget.TextBox(
+                    fmt=' ',
+                    fontsize=13,
+                ),
+                widget.Spacer(length=-4),
+                widget.CPU(
+                    format='{load_percent}%',
+                    markup=True,
+                    max_chars=5,
+                    scroll_fixed_width=True,
+                    update_interval=1.5,
+                    width=45,
+                ),
+                widget.ThermalSensor(
+                    format='{temp:.0f}{unit}',
+                    scroll_fixed_width=True,
+                    tag_sensor='CPUTIN',
+                    width=40,
+                ),
+                widget.Spacer(length=7),
             ],
             20,
             background=["#12120f"],
             # border_width=[0, 0, 1, 0],  # Draw top and bottom borders
             # border_color=["#2e383c", "#2e383c", "#2e383c", "#2e383c"]
         ),
-        wallpaper="~/.config/qtile/sunset_kanagawa-dragon.jpg",
+        # wallpaper="~/.config/qtile/sunset.jpg",
         # wallpaper="~/.config/qtile/mountain_kanagawa-dragon.jpg",
+        wallpaper="~/.config/qtile/cool_snow_peaks.jpg",
         # https://www.pexels.com/photo/full-moon-behind-mountains-1183021/
         wallpaper_mode="fill",
     ),

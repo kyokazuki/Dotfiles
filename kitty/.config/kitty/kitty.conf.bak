@@ -17,7 +17,7 @@ background_blur 10
 background_image none
 
 # BEGIN_KITTY_THEME
-# Kanagawa_dragon
+# Atom
 include current-theme.conf
 # END_KITTY_THEME
 

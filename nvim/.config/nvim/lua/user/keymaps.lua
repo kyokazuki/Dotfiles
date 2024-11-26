@@ -11,12 +11,12 @@ vim.g.maplocalleader = " "
 
 -- Motion --
 keymap("n", "j", "h", opts)
-keymap("n", "k", "j", opts)
-keymap("n", "l", "k", opts)
+keymap("n", "k", "gj", opts)
+keymap("n", "l", "gk", opts)
 keymap("n", ";", "l", opts)
 keymap("v", "j", "h", opts)
-keymap("v", "k", "j", opts)
-keymap("v", "l", "k", opts)
+keymap("v", "k", "gj", opts)
+keymap("v", "l", "gk", opts)
 keymap("v", ";", "l", opts)
 
 -- Normal --

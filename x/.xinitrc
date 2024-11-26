@@ -47,12 +47,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# mouse and display settings
-xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144
-xset r rate 250 40
-setxkbmap -option caps:swapescape
-xinput set-prop '8' 'libinput Accel Speed' -0.8
-xbindkeys
-
 # start qtile
 qtile start
