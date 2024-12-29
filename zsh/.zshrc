@@ -41,3 +41,6 @@ zstyle ':completion:*' menu select
 
 # To customize prompt, run `p10k configure` or edit ~/Dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/Dotfiles/zsh/.p10k.zsh ]] || source ~/Dotfiles/zsh/.p10k.zsh
+
+# remove with confirmation
+alias rm='rm -i'
