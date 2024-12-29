@@ -5,15 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=500
-SAVEHIST=500
-bindkey -e
+HISTSIZE=1000
+SAVEHIST=1000
+unsetopt beep
+bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/erikyo/.zshrc'
+zstyle :compinstall filename '/home/kyo/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -30,3 +30,14 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# fzf integration
+source <(fzf --zsh)
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
+# case insensitive path-completion
+autoload -Uz +X compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+
+# To customize prompt, run `p10k configure` or edit ~/Dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/Dotfiles/zsh/.p10k.zsh ]] || source ~/Dotfiles/zsh/.p10k.zsh

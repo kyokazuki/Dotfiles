@@ -7,7 +7,7 @@ configuration {
     modes:                  "drun,ssh";
     disable-history:        true;
 
-    font:                   "SauceCodePro Nerd Font 10";
+    font:                   "Hack Nerd Font 10";
     icon-theme:             "Papirus";
     show-icons:             true;
 }
