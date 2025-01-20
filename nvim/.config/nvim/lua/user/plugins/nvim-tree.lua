@@ -56,7 +56,7 @@ return {
                 },
             },
 	    view = {
-		side = "right",
+		side = "left",
 		signcolumn = "no",
 	    },
         })

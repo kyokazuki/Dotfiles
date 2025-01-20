@@ -8,12 +8,20 @@ return {
     --     })
     --     vim.cmd("colorscheme gruvbox")
     -- end
-    --
-    "rebelot/kanagawa.nvim",
+
+ --    "rebelot/kanagawa.nvim",
+ --    config = function()
+ --        require("kanagawa").setup({
+	-- })
+ --        vim.cmd("colorscheme kanagawa-dragon")
+ --    end
+
+    "navarasu/onedark.nvim",
     config = function()
-        require("kanagawa").setup({
+	require("onedark").setup({
+	    style = 'dark'
 	})
-        vim.cmd("colorscheme kanagawa-dragon")
+	vim.cmd("colorscheme onedark")
     end
 }
 
