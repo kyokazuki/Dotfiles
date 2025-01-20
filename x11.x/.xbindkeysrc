@@ -1,0 +1,9 @@
+# volume control
+"if [ $(pactl get-sink-volume @DEFAULT_SINK@ | head -n1 | cut -d/ -f2 | tr -d ' %') -lt 100 ]; then pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +5%; fi"
+  XF86AudioRaiseVolume
+
+"pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  XF86AudioLowerVolume
+
+# brightness control
+# "xrandr --output $(xrandr | grep -w connected | cut -f '1' -d ' ') --brightness $(echo $(xrandr --verbose --current | grep 'Brightness' | grep -Eo '[+-]?[0-9]+([.][0-9]+)') +0.1 | bc)"

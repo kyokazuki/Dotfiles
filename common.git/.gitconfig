@@ -1,0 +1,7 @@
+[safe]
+	directory = *
+[user]
+	name = KyoKazuki
+	email = kyokazuki@proton.me
+[init]
+	defaultBranch = main

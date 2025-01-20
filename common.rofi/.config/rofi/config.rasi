@@ -1,0 +1,76 @@
+configuration {
+    case-sensitive:         false;
+    click-to-exit:          true;
+    cycle:                  false;
+    display-drun:           "󱓞 ❯";
+    drun-display-format:    "{name}";
+    modes:                  "drun,ssh";
+    disable-history:        true;
+
+    font:                   "Hack Nerd Font 10";
+    icon-theme:             "Papirus";
+    show-icons:             true;
+}
+
+@theme "/dev/null"
+
+* {
+    border: 		    2;
+    margin: 		    1;
+    padding: 		    0;
+    spacing: 		    0;
+
+    bg:			    #181616;
+    bg-alt:		    #393836;
+    fg:			    #a6a69c;
+    blue:		    #87a987;
+
+    background-color: 	    @bg;
+    text-color: 	    @fg;
+}
+
+window {
+    border-color:	    @bg-alt;
+    width:		    18%;
+}
+
+mainbox {
+    children: 		    [inputbar, listview];
+}
+
+inputbar {
+    background-color: 	    @bg-alt;
+    children: 		    [prompt, entry];
+}
+
+entry {
+    background-color: 	    inherit;
+    padding: 		    12px 0px;
+}
+
+prompt {
+    background-color: 	    inherit;
+    padding:		    12px 10px 12px 12px;
+}
+
+listview {
+    fixed-height:	    false;
+    dynamic:		    false;
+    lines:		    5;
+}
+
+element {
+    children: 		    [element-icon, element-text];
+}
+
+element-icon {
+    padding: 		    7px;
+}
+
+element-text {
+    padding: 		    10px;
+}
+
+element-text selected {
+    text-color: 	    @blue;
+}
