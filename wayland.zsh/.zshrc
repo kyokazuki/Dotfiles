@@ -39,8 +39,5 @@ autoload -Uz +X compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
-# To customize prompt, run `p10k configure` or edit ~/Dotfiles/zsh/.p10k.zsh.
-[[ ! -f ~/Dotfiles/zsh/.p10k.zsh ]] || source ~/Dotfiles/zsh/.p10k.zsh
-
 # command aliases
 alias ls='ls --color=auto'
