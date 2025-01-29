@@ -1,2 +1,2 @@
-common.neovim/.local/share/nvim/plugged
+/common.neovim/.local/share/nvim/plugged
 !.gitignore
