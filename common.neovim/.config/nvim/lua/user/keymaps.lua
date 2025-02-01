@@ -38,4 +38,8 @@ vim.keymap.set("i", "<C-Enter>", "<Esc>o<Esc>^Di", opts)
 -- Paste over
 vim.keymap.set("v", "p", '"_dP', opts)
 
--- Plugin keymaps
+-- Navigate buffers
+vim.keymap.set("n", "<A-;>", ":bnext<CR>", opts)
+vim.keymap.set("n", "<A-j>", ":bprevious<CR>", opts)
+vim.keymap.set("n", "<leader>q", ":bd<CR>", opts)
+

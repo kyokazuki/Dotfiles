@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/jiang/Dotfiles/common.neovim/.config/nvim/lua/user/plugins'
+let g:netrw_dirhist_2='/home/jiang/Dotfiles/common.neovim/.config/nvim/lua/user'
+let g:netrw_dirhist_1='/home/jiang/Dotfiles/common.neovim/.config/nvim/lua'
+let g:netrw_dirhist_0='/home/jiang/Dotfiles/common.neovim/.config/nvim'
+let g:netrw_dirhist_9='/home/jiang/Dotfiles/common.neovim/.config'
+let g:netrw_dirhist_8='/home/jiang/Dotfiles/common.neovim'
+let g:netrw_dirhist_7='/home/jiang/Dotfiles'
+let g:netrw_dirhist_6='/home/jiang/Dotfiles/common.neovim/.config/nvim/lua/user'
+let g:netrw_dirhist_5='/home/jiang/Dotfiles/common.neovim/.config/nvim/lua'
+let g:netrw_dirhist_4='/home/jiang/Dotfiles/common.neovim/.config/nvim'

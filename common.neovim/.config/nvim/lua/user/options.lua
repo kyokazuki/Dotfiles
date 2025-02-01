@@ -17,6 +17,7 @@ vim.opt.signcolumn = "no"
 vim.opt.smartcase = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.tabstop = 4
 vim.opt.termguicolors = true
 
 vim.api.nvim_create_autocmd("FileType", {
