@@ -4,16 +4,16 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 -- Motion --
-vim.keymap.set({"n", "v"}, "j", "h", opts)
-vim.keymap.set({"n", "v"}, "k", "gj", opts)
-vim.keymap.set({"n", "v"}, "l", "gk", opts)
-vim.keymap.set({"n", "v"}, ";", "l", opts)
+vim.keymap.set({"n", "v"}, "h", "h", opts)
+vim.keymap.set({"n", "v"}, "j", "gj", opts)
+vim.keymap.set({"n", "v"}, "k", "gk", opts)
+vim.keymap.set({"n", "v"}, "l", "l", opts)
 
 -- Navigate windows
-vim.keymap.set("n", "<C-j>", "<C-w>h", opts)
-vim.keymap.set("n", "<C-k>", "<C-w>j", opts)
-vim.keymap.set("n", "<C-l>", "<C-w>k", opts)
-vim.keymap.set("n", "<C-;>", "<C-w>l", opts)
+vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
+vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
+vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
+vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize windows
 vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -43,3 +43,8 @@ vim.keymap.set("n", "<A-;>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<A-j>", ":bprevious<CR>", opts)
 vim.keymap.set("n", "<leader>q", ":bd<CR>", opts)
 
+-- Show tab as characters
+vim.keymap.set("n", "<leader>t", function()
+	vim.cmd("set list!")
+	vim.cmd("set listchars=tab:>·")
+end)

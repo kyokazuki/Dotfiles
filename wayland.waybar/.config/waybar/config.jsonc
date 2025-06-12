@@ -63,7 +63,7 @@
     },
     "network": {
       "interface": "enp4s0",
-      "format": "{ifname}",
+      "format": "{ipv4}",
       "format-wifi": "<span rise='-3000' size='xx-large'></span> {essid}",
       "format-ethernet": "<span rise='-3000' size='xx-large'>󰌗</span> {ipaddr}/{cidr}",
       "format-disconnected": "<span rise='-3000' size='xx-large'>󰖪</span> No Network",
