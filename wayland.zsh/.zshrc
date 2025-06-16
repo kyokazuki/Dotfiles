@@ -41,3 +41,9 @@ zstyle ':completion:*' menu select
 
 # command aliases
 alias ls='ls --color=auto'
+
+# aliases for nfs server and pass
+export PASSWORD_STORE_DIR=/mnt/MyFiles/ID/.password-store
+alias mount-server-local="sudo mount -t nfs -o vers=4 10.10.0.1:/mnt/MyFiles /mnt/MyFiles
+alias mount-server-tailscale="sudo mount -t nfs -o vers=4 $(tailscale status | grep server-openwrt | awk '{print $1}'):/mnt/MyFiles /mnt/MyFiles
+alias umount-server="sudo umount /mnt/MyFiles"
