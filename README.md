@@ -1,4 +1,4 @@
-# Dotfiles :card_index_dividers:
+# :card_index_dividers: Dotfiles
 My desktop configuration files. [Wallpapers](/qtile/.config/qtile/) are created with my [ImageToPalette :art:](https://github.com/kyokazuki/ImageToPalette) python script.
 
 ![desktop.png](/desktop1.png)
