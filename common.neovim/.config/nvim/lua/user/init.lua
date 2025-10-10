@@ -17,6 +17,7 @@ Plug('nvim-tree/nvim-tree.lua')
 Plug('nvim-lualine/lualine.nvim')
 Plug('keaising/im-select.nvim')
 Plug('navarasu/onedark.nvim')
+Plug('loctvl842/monokai-pro.nvim')
 
 vim.call('plug#end')
 

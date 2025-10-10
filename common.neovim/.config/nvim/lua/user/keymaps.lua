@@ -39,8 +39,8 @@ vim.keymap.set("i", "<C-Enter>", "<Esc>o<Esc>^Di", opts)
 vim.keymap.set("v", "p", '"_dP', opts)
 
 -- Navigate buffers
-vim.keymap.set("n", "<A-;>", ":bnext<CR>", opts)
-vim.keymap.set("n", "<A-j>", ":bprevious<CR>", opts)
+vim.keymap.set("n", "<A-l>", ":bnext<CR>", opts)
+vim.keymap.set("n", "<A-h>", ":bprevious<CR>", opts)
 vim.keymap.set("n", "<leader>q", ":bd<CR>", opts)
 
 -- Show tab as characters
