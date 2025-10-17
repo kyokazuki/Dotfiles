@@ -1,0 +1,86 @@
+{
+    "layer": "top",
+    "position": "left",
+    "spacing": 0,
+    "modules-left": [
+		"clock"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+		// "hyprland/language",
+		"network"
+    ],
+    // "custom/logout": {
+    //     "format": "⏻",
+    //     "tooltip": false,
+    //     "on-click": "niri msg action quit"
+    // },
+    "hyprland/workspaces": {
+        "format": "<span size='large'>{icon}</span>",
+		"format-icons": {
+			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 5
+		}
+    },
+    "niri/window": {
+        "separate-outputs": true,
+        "icon": true,
+        "icon-size": 16,
+    },
+    "niri/language": {
+        "format": "{shortDescription}",
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%y\n%m\n%d\n\n%a\n\n<b>%H\n%M</b>}",
+		// "locale": "ja_JP.UTF-8"
+    },
+    "cpu": {
+        "format": "\uf4bc\n{usage}",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "\uefc5\n{}"
+    },
+    // "pulseaudio": {
+    //     "format": "{icon}\n{volume}",
+    //     "format-icons": ["\uf026", "\uf027", "\uf028"],
+    //     "scroll-step": 2,
+    // },
+    "network": {
+        "format-wifi": "<span size='xx-large'></span>",
+        "format-ethernet": "<span size='xx-large'></span>",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "<span size='xx-large'></span>",
+        "format-disconnected": "<span size='xx-large'>⚠</span>",
+    },
+    // "custom/notification": {
+    //     "tooltip": false,
+    //     "format": "{icon}",
+    //     "format-icons": {
+    //         "notification": "<span foreground='red'><sup></sup></span>",
+    //         "none": "",
+    //         "dnd-notification": "<span foreground='red'><sup></sup></span>",
+    //         "dnd-none": "",
+    //         "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+    //         "inhibited-none": "",
+    //         "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+    //         "dnd-inhibited-none": "",
+    //     },
+    //     "return-type": "json",
+    //     "exec-if": "which swaync-client",
+    //     "exec": "swaync-client -swb",
+    //     "on-click": "swaync-client -t -sw",
+    //     "on-click-right": "swaync-client -d -sw",
+    //     "escape": true,
+    //   },
+}

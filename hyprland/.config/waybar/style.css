@@ -1,0 +1,125 @@
+@import "./rose-pine-colors.css";
+
+* {
+	font-family: "JetBrainsMonoNL Nerd Font Mono";
+	font-size: 14px;
+	font-feature-settings: "tnum";
+}
+
+window#waybar {
+  background: transparent;
+  background-color: @base;
+  color: @text;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: none;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+  transition-property: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  -gtk-icon-effect: none;
+  -gtk-icon-shadow: none;
+}
+
+#workspaces button {
+  padding: 0 0;
+  color: #f0f0ff;
+}
+
+#workspaces button:hover {
+  background-color: @surface;
+}
+
+#workspaces button.active {
+  background-color: rgba(88, 91, 112, 1);
+}
+
+#workspaces button.active:hover {
+  background-color: rgba(108, 112, 134, 1);
+}
+
+#workspaces button.urgent {
+  background-color: @love;
+}
+
+#mode {
+  background-color: #64727d;
+  border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#language,
+#mpd,
+#custom-style {
+  color: @text;
+  padding: 8px 8px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#battery {
+  background-color: #313244;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#cpu {
+  background-color: @surface;
+}
+
+#memory {
+  background-color: @surface;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @love;
+}
+
+#pulseaudio {
+  background-color: @surface;
+  color: @foam;
+}
