@@ -14,17 +14,19 @@ if status is-login
 
 	# User variables
 	set -gx EDITOR nvim
-	set -gx PASSWORD_STORE_DIR /mnt/MyFiles/ID/.password-store
+	set -gx PASSWORD_STORE_DIR /mnt/nas/repository/documents/credentials/.password-store
 
 	# Start desktop environment
 	# exec niri
-	hyprland &
+	# hyprland &
 
 end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-	alias mount-server-local="sudo mount -t nfs -o vers=4 10.10.0.1:/mnt/MyFiles /mnt/MyFiles"
-	alias mount-server-tailscale="sudo mount -t nfs -o vers=4 (tailscale status | grep server-openwrt | awk '{print $1}'):/mnt/MyFiles /mnt/MyFiles"
+	alias mount-repository="sudo mount -t nfs -o vers=4 10.10.0.207:/mnt/access-pool/repository /mnt/nas/repository"
+	alias mount-vault="sudo mount -t nfs -o vers=4 10.10.0.207:/mnt/archive-pool/vault /mnt/nas/vault"
+	alias mount-collection="sudo mount -t nfs -o vers=4 10.10.0.207:/mnt/archive-pool/collection /mnt/nas/collection"
+	# alias mount-server-tailscale="sudo mount -t nfs -o vers=4 (tailscale status | grep server-openwrt | awk '{print $1}'):/mnt/MyFiles /mnt/MyFiles"
 end
 
